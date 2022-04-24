@@ -1,0 +1,73 @@
+
+:root{
+    --clr-dark: hsl(230 35% 7%);
+    --clr-light: hsl(231 77% 90%);
+    --clr-white: hsl(0 0% 100%);
+    --clr-white-opc: rgba(255, 255, 255, 0.5);
+    --clr-white-opc2:rgba(255, 255, 255, 0.2);
+    --clr-violet-opc: rgba(136, 148, 252,0.5);
+    --clr-violet: rgb(106, 115, 202);
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    --fs-2rem: 2rem;
+    --fs-name: 2.6rem;
+    --fs-7m: .7rem;
+  
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+@mixin d-flex($v1, $v2, $v3, $v4){
+    display: flex;
+    justify-content: $v1;
+    align-items: $v2;
+    @if $v3 == 'true'{
+        flex-direction: column;
+
+    }@else{
+        flex-direction: row;
+    }
+    @if $v4 == 'true'{
+        flex-wrap: wrap;
+    }
+}
+
+@mixin container-text-center{
+    text-align: center;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: var(--clr-white) ;
+    background-color: var(--clr-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,600&family=Barlow:wght@400;700&family=Bellefair&display=swap');
+@import "_General";
+@import "_header";
+@import "_home-space";
+@import "_destination-space";
+@import "_crew-space";
+@import "_technology-space";
+@import "_media";

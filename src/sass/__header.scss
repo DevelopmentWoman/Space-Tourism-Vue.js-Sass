@@ -1,0 +1,73 @@
+
+@mixin btn-toggle($v1){
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    top: 2rem;
+    right: 1rem;
+    background: url($v1) no-repeat transparent;
+    border: none;
+    background-position: center;
+    outline: none;
+    z-index: 110;
+}
+
+header{
+    height: 6rem;
+    .logo{
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 10;
+    }
+    nav{
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(255, 255, 255,.1);
+        backdrop-filter: blur(1.5rem);
+        width: 70%;
+        left: 30%;
+        padding: 1rem;
+        transform: translateX(100%);
+        transition: transform 750ms ease-in-out;
+        ul{
+            margin-top: 15vh;
+            margin-left: 1.5rem;
+            @include d-flex(flex-start, flex-start, 'true', 'true');
+            gap: 2.5rem;
+            font-size: var(--fs-200);
+            li{
+                list-style: none;
+                span{
+                    padding-right: .5rem;
+                    font-weight: bolder;
+                    pointer-events: none;
+                }
+            }
+
+        }
+        z-index: 100;
+
+    }
+    .open{
+
+        transform: translateX(0);
+        transition: transform 750ms ease-in-out;
+    }
+    
+    .mobile-nav-toggle{
+        @include btn-toggle('../../public/assets/shared/icon-hamburger.svg')
+    }
+
+    .close{
+        @include btn-toggle('../../public/assets/shared/icon-close.svg')
+    }
+
+
+
+}
+
+
+

@@ -1,0 +1,79 @@
+
+.container-destination{
+    // background: url('../assets/destination/background-destination-mobile.jpg') no-repeat transparent;
+    background: url('../../public/assets/destination/background-destination-mobile.jpg') no-repeat transparent;
+    background-size: cover;
+    .container-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 1fr 1fr 2fr 4fr;
+        // grid-gap: 1rem;
+
+        h1{
+            margin-top: 1rem;
+            span{
+                padding-right: .5rem;
+                font-weight: 700;
+                color: var(--clr-white-opc);
+            }
+        }
+
+        .container-img{
+            margin: auto;
+            img{
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        .container-btn{
+            @include container-text-center();
+            button{
+                color: var(--clr-white);
+                letter-spacing: 2.7px;
+                background: transparent;
+                border: none;
+                
+                &:hover{
+                    color: var(--clr-white-opc);
+                    border-bottom: 3px solid white;
+
+                    cursor: pointer;
+                }
+                &:focus{
+                    border-bottom: 3px solid white;
+                    outline: 3px solid rgb(106, 115, 202);
+                }
+            }
+            .activ{
+                    color: var(--clr-white-opc);
+                    border-bottom: 3px solid white;
+            }
+        }
+
+        .container-title{
+            padding-top: 1rem; 
+            @include container-text-center();
+            h2{
+                font-size: var(--fs-name)
+            }
+        }
+
+        .container-article{
+
+            @include container-text-center();
+
+        }
+
+        .container-footer{
+            @include d-flex(flex-start, center, 'true', 'true');
+            gap: 1.5rem;
+            .distance{
+                @include container-text-center();
+            }
+            .travel{
+                @include container-text-center();
+
+            }
+        }
+    }
+}

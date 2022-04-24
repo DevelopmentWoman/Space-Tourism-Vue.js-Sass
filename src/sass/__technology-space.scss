@@ -1,0 +1,87 @@
+
+.container-technology{
+    // background: url('../assets/destination/background-destination-mobile.jpg') no-repeat transparent;
+    background: url('../../public/assets/technology/background-technology-mobile.jpg') no-repeat transparent;
+    background-size: cover;
+    .container-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 3fr .5fr .2fr .5fr 3fr;
+        align-items: flex-start;
+        grid-gap: .5rem;
+
+        h1{
+            margin-top: 1rem;
+            span{
+                padding-right: .5rem;
+                font-weight: 700;
+                color: var(--clr-white-opc);
+            }
+        }
+
+        .container-img{
+            width: 100%;
+            // align-self: center;
+            // justify-self: center;
+            @include container-text-center();
+            img{
+                width: 100%;
+                height: 15.62rem;
+                // border-bottom: 1px solid var(--clr-white-opc);
+            }
+        }
+
+        .container-btn{
+            width: 100%;
+            // padding: .7rem 0;
+            @include container-text-center();
+            // @include d-flex(center, center, 'false','false');
+            button{
+                width: 2rem;
+                padding: .5rem;
+                margin-right: .8rem;
+                background: transparent;
+                border-radius: 50%;
+                border: 1px solid var(--clr-white-opc);
+                color: var(--clr-white);
+                
+                &:hover,&:focus{
+                    // color: var(--clr-white-opc);
+                    // border-bottom: 3px solid white;
+                    background-color: var(--clr-white);
+                    color: black;
+                    cursor: pointer;
+                }
+
+            }
+            .activ{
+
+                background-color: var(--clr-white);
+                color: black;
+            }
+        }
+
+        .container-title{
+            @include container-text-center();
+            h2{
+                font-size: 1.8rem;
+                color: var(--clr-white);
+            }
+        }
+
+        .container-subtitle{
+            @include container-text-center();  
+            h2{
+                font-size: var(--fs-200);
+                letter-spacing: 2px;
+                color: var(--clr-white-opc)
+            }
+        }
+
+        .container-article{
+            @include container-text-center();
+
+        }
+
+        
+    }
+}

@@ -1,0 +1,85 @@
+
+.container-crew{
+    // background: url('../assets/destination/background-destination-mobile.jpg') no-repeat transparent;
+    background: url('../../public/assets/crew/background-crew-mobile.jpg') no-repeat transparent;
+    background-size: cover;
+    .container-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 4fr .5fr .2fr .5fr 4fr;
+
+        // grid-gap: 2rem;
+
+        h1{
+            margin-top: 1rem;
+            align-self: center;
+            span{
+                padding-right: .5rem;
+                font-weight: 700;
+                color: var(--clr-white-opc);
+            }
+        }
+
+        .container-img{
+            width: 80%;
+            @include container-text-center;
+            img{
+                width: 15rem;
+                height: 18.75rem;
+                border-bottom: 1px solid var(--clr-white-opc);
+            }
+        }
+
+        .container-btn{
+            width: 100%;
+            @include d-flex(center, center, 'false','false');
+            button{
+                // width: 1rem;
+                padding: .4rem;
+                margin-right: .8rem;
+                background: var(--clr-white-opc);
+                border-radius: 50%;
+                border: none;
+                
+                &:hover,&:focus{
+                    // color: var(--clr-white-opc);
+                    // border-bottom: 3px solid white;
+                    background-color: var(--clr-white);
+
+                    cursor: pointer;
+                }
+
+            }
+            .activ{
+
+                background-color: var(--clr-white);
+            }
+        }
+
+        .container-title{
+            h2{
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: var(--clr-white)
+            }
+        }
+
+        .container-subtitle{
+            @include container-text-center();  
+            h2{
+                font-size: var(--fs-300);
+                letter-spacing: 2px;
+                color: var(--clr-white-opc)
+            }
+        }
+
+        .container-article{
+            align-self: flex-start;
+            padding: 2rem;
+            @include container-text-center();
+
+
+        }
+
+
+    }
+}
